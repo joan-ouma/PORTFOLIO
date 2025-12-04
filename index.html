@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>My Portfolio Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="static/styles/style.css"/>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <nav class="container">
+        <div class="logo">Ouma Joan Akello</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Dark Mode Toggle -->
+        <div class="dark-toggle">
+            <input type="checkbox" id="darkModeToggle"/>
+            <label class="toggle-label" for="darkModeToggle"></label>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Hi, I'm Ouma Akello Joan</h1>
+            <p>A passionate fullstack developer creating beautiful and functional web experiences</p>
+            <a href="#contact" class="cta-button">Hire Me</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-content fade-in">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hi there! I'm Joan, a developer with a love for crafting beautiful and functional web experiences. I
+                    enjoy problem-solving and I have a keen eye for detail.</p>
+                <p>When I'm not coding, you can find me exploring new technologies, contributing to open source
+                    projects, or learning about the latest design trends.</p>
+                <a href="mailto:joanouma48@gmail.com?subject=Contact%20Request" class="cta-button">Hire Me</a>
+            </div>
+            <div class="about-image">
+                <img src="static/images/profile.jpg" alt="About me" id="profile-image"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Educational Background Section -->
+<section class="education" id="education">
+    <div class="container">
+        <h2 class="fade-in">Educational Background</h2>
+        <div class="education-grid">
+            <div class="education-card fade-in">
+                <h3>Bachelor of Science in Electronics and Computer Engineering</h3>
+                <p><strong>Jomo Kenyatta University of Agriculture and Technology</strong></p>
+                <p>2021 - Present</p>
+                <p>Studying various computer science and electronics topics including software development, digital systems, and embedded systems.</p>
+            </div>
+            <div class="education-card fade-in">
+                <h3>Technical School</h3>
+                <p><strong>Zoo and Sons Computer Academy</strong></p>
+                <p>June 2021- August 2021</p>
+                <p>Studied computer packages including Microsoft Office(Word,Excel,Power Point), Google workspace and Computer Hardware.</p>
+            </div>
+            <div class="education-card fade-in">
+                <h3>High School </h3>
+                <p><strong>Bunyore Girls' High School</strong></p>
+                <p>2017 - 2021</p>
+                <p>Attained an A- of 76 points.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+    <div class="container">
+        <h2 class="fade-in">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-palette"></i> UX/UI Design</h3>
+                <ul>
+                    <li>UX Research</li>
+                    <li>Design Thinking</li>
+                    <li>UI Design</li>
+                    <li>Figma, Adobe Photoshop, Canva</li>
+                </ul>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-code"></i> Frontend</h3>
+                <ul>
+                    <li>HTML, CSS, Bootstrap</li>
+                    <li>JavaScript, React</li>
+                    <li>Responsive Design</li>
+                    <li>Modern CSS (Grid, Flexbox)</li>
+                </ul>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <ul>
+                    <li>Python (Django, Flask)</li>
+                    <li>Node.js, Express</li>
+                    <li>Golang</li>
+                    <li>SQL (MySQL, PostgreSQL)</li>
+                    <li>MongoDB</li>
+                    <li>API Development</li>
+                    <li>Database Design</li>
+                    <li>Authentication</li>
+                </ul>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-lightbulb"></i> Soft Skills</h3>
+                <ul>
+                    <li>Problem Solving</li>
+                    <li>Collaboration</li>
+                    <li>Communication</li>
+                    <li>Critical Thinking</li>
+                </ul>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-wrench"></i> Tools</h3>
+                <ul>
+                    <li>Arduino</li>
+                    <li>Proteus</li>
+                    <li>KiCAD</li>
+                    <li>AUTOCAD</li>
+                    <li>Cisco Packet Tracer</li>
+                    <li>Postman</li>
+                    <li>Nginx</li>
+                    <li>Docker</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="certifications" id="certifications">
+    <div class="container">
+        <h2 class="fade-in">Certifications</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="static/images/cert1.jpg" alt="Certification 1"/>
+                </div>
+                <div class="project-content">
+                    <h3>Certified Web Developer</h3>
+                    <p>Completed the full web development course, covering frontend and backend technologies.</p>
+                    <div class="project-links">
+                        <a href="https://certificate.link/cert1" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="static/images/cert2.jpg" alt="Certification 2"/>
+                </div>
+                <div class="project-content">
+                    <h3>AI & Machine Learning Certification</h3>
+                    <p>Advanced training on AI models and data science techniques.</p>
+                    <div class="project-links">
+                        <a href="https://certificate.link/cert2" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <div class="container">
+        <h2 class="fade-in">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="static/images/rec.jpg" alt="Project Image"/>
+                </div>
+                <div class="project-content">
+                    <h3>NutriChef Recipe-recommender App</h3>
+                    <p>NutriChef is an AI-Powered Recipe Generator<br/>
+                        A Flask-based web application that leverages OpenAI GPT-4 to generate personalized recipes based
+                        on user-provided ingredients, dietary preferences, and cuisine types. Features include user
+                        login/signup, dynamic recipe generation, and user search history management.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/joanjullie59/my_recipe_recommender_app" target="_blank">View
+                            Details</a>
+                        <a href="https://joans-recipe-recommender-app.onrender.com/" target="_blank">View Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="static/images/focusflow.png"
+                         alt="FocusFlow TodoApp"/>
+                </div>
+                <div class="project-content">
+                    <h3>FocusFlow Todo-List App</h3>
+                    <p>FocusFlow is a powerful task management tool that helps you organize your tasks, set due dates, reminders, and track your productivity efficiently.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/joanjullie59/pythontodo_list_website/tree/main" target="_blank">View Details</a>
+                        <a href="https://pythontodo-list-website-1.onrender.com" target="_blank">View Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop"
+                         alt="Mental Health Platform"/>
+                </div>
+                <div class="project-content">
+                    <h3>Mental Health Platform</h3>
+                    <p>An AI-powered mental health platform for students providing personalized support and resources
+                        for mental wellness.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Details</a>
+                        <a href="#" target="_blank">View Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop"
+                         alt="Feedback Platform"/>
+                </div>
+                <div class="project-content">
+                    <h3>Anonymous Feedback Platform</h3>
+                    <p>A secure anonymous feedback platform for students to provide honest feedback about their
+                        educational experience.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Details</a>
+                        <a href="#" target="_blank">View Design</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="static/images/bugtracker.png"
+                         alt="Feedback Platform"/>
+                </div>
+                <div class="project-content">
+                    <h3>Bug Tracker</h3>
+                    <p>A full-stack MERN bug tracker that helps development teams log, assign, and resolve issues efficiently. Features user authentication, project organization, and real-time status tracking. Built to demonstrate robust full-stack development and debugging proficiency.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/joan-ouma/my_port_folio_website" target="_blank">View Details</a>
+                        <a href="https://bugtracker-ashy.vercel.app" target="_blank">View Design</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="fade-in">Let's Work Together</h2>
+        <p class="fade-in">Have a project in mind? Let's discuss how we can bring your ideas to life.</p>
+        <div class="contact-links fade-in">
+            <a href="mailto:joanouma48@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://linkedin.com/in/joan-ouma" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/joan-ouma" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/Jullie_IOT" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://behance.net/joanouma" target="_blank" title="Behance">
+                <i class="fab fa-behance"></i>
+            </a>
+        </div>
+        <a href="mailto:joanouma48@gmail.com?subject=Contact%20Request" class="cta-button">Get In Touch</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Joan Ouma. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
