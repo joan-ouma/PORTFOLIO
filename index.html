@@ -38,9 +38,14 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1>Hi, I'm Ouma Akello Joan</h1>
-            <p>A passionate fullstack developer creating beautiful and functional web experiences</p>
-            <a href="#contact" class="cta-button">Hire Me</a>
+            <p class="hero-greeting fade-in">Hello, I'm</p>
+            <h1 class="fade-in">Ouma Joan Akello</h1>
+            <p class="hero-title fade-in">Software Engineer</p>
+            <p class="hero-description fade-in">I build scalable web applications and digital solutions that combine elegant design with robust functionality. Specialized in MERN stack, Golang, and modern web technologies.</p>
+            <div class="hero-buttons fade-in">
+                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="#contact" class="cta-button cta-button-outline">Get In Touch</a>
+            </div>
         </div>
     </div>
 </section>
@@ -192,10 +197,20 @@
 <section class="projects" id="projects">
     <div class="container">
         <h2 class="fade-in">My Projects</h2>
+        
+        <!-- Project Filter Buttons -->
+        <div class="project-filters fade-in">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="mern">MERN Stack</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="ai">AI/ML</button>
+            <button class="filter-btn" data-filter="golang">Golang</button>
+        </div>
+        
         <div class="projects-grid">
-            <div class="project-card fade-in">
+            <div class="project-card fade-in" data-category="python ai">
                 <div class="project-image">
-                    <img src="static/images/rec.jpg" alt="Project Image"/>
+                    <img src="static/images/rec.jpg" alt="NutriChef Recipe-recommender App" loading="lazy"/>
                 </div>
                 <div class="project-content">
                     <h3>NutriChef Recipe-recommender App</h3>
@@ -204,32 +219,44 @@
                         on user-provided ingredients, dietary preferences, and cuisine types. Features include user
                         login/signup, dynamic recipe generation, and user search history management.</p>
                     <div class="project-links">
-                        <a href="https://github.com/joanjullie59/my_recipe_recommender_app" target="_blank">View
-                            Details</a>
+                        <a href="https://github.com/joanjullie59/my_recipe_recommender_app" target="_blank">View Details</a>
                         <a href="https://joans-recipe-recommender-app.onrender.com/" target="_blank">View Design</a>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card fade-in">
+            <div class="project-card fade-in" data-category="mern">
                 <div class="project-image">
-                    <img src="static/images/focusflow.png"
-                         alt="FocusFlow TodoApp"/>
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="E-Commerce Platform" loading="lazy"/>
                 </div>
                 <div class="project-content">
-                    <h3>FocusFlow Todo-List App</h3>
-                    <p>FocusFlow is a powerful task management tool that helps you organize your tasks, set due dates, reminders, and track your productivity efficiently.</p>
+                    <h3>E-Commerce Platform</h3>
+                    <p>A comprehensive full-stack e-commerce solution built with MERN stack. Features include product catalog management, secure payment processing, order tracking, user authentication, shopping cart functionality, and admin dashboard. Solves real-world online retail challenges by providing a scalable, secure, and user-friendly shopping experience.</p>
                     <div class="project-links">
-                        <a href="https://github.com/joanjullie59/pythontodo_list_website/tree/main" target="_blank">View Details</a>
-                        <a href="https://pythontodo-list-website-1.onrender.com" target="_blank">View Design</a>
+                        <a href="#" target="_blank">View Details</a>
+                        <a href="#" target="_blank">View Design</a>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card fade-in">
+            <div class="project-card fade-in" data-category="python golang">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop" alt="Healthcare Appointment System" loading="lazy"/>
+                </div>
+                <div class="project-content">
+                    <h3>Healthcare Appointment Booking System</h3>
+                    <p>A digital healthcare solution that streamlines appointment scheduling for clinics and hospitals. Built with Python/Flask backend and modern frontend technologies. Features include doctor availability management, patient registration, automated reminders, appointment rescheduling, and medical history tracking. Addresses critical healthcare access challenges by reducing wait times and improving patient experience.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Details</a>
+                        <a href="#" target="_blank">View Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in" data-category="ai">
                 <div class="project-image">
                     <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop"
-                         alt="Mental Health Platform"/>
+                         alt="Mental Health Platform" loading="lazy"/>
                 </div>
                 <div class="project-content">
                     <h3>Mental Health Platform</h3>
@@ -242,10 +269,10 @@
                 </div>
             </div>
 
-            <div class="project-card fade-in">
+            <div class="project-card fade-in" data-category="python">
                 <div class="project-image">
                     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop"
-                         alt="Feedback Platform"/>
+                         alt="Feedback Platform" loading="lazy"/>
                 </div>
                 <div class="project-content">
                     <h3>Anonymous Feedback Platform</h3>
@@ -256,10 +283,12 @@
                         <a href="#" target="_blank">View Design</a>
                     </div>
                 </div>
-                <div class="project-card fade-in">
+            </div>
+
+            <div class="project-card fade-in" data-category="mern">
                 <div class="project-image">
                     <img src="static/images/bugtracker.png"
-                         alt="Feedback Platform"/>
+                         alt="Bug Tracker Application" loading="lazy"/>
                 </div>
                 <div class="project-content">
                     <h3>Bug Tracker</h3>
@@ -269,7 +298,6 @@
                         <a href="https://bugtracker-ashy.vercel.app" target="_blank">View Design</a>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>

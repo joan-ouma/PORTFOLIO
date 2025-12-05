@@ -113,13 +113,49 @@ nav {
 .hero-content {
     position: relative;
     z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-greeting {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1s ease;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.hero-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .hero p {
@@ -133,11 +169,33 @@ nav {
     display: inline-block;
     background: #e74c3c;
     color: white;
-    padding: 12px 30px;
+    padding: 14px 32px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
     transition: all 0.3s ease;
+    font-size: 1rem;
+    border: 2px solid #e74c3c;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+}
+
+.cta-button-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.cta-button-outline:hover {
+    background: white;
+    color: #667eea;
+    border-color: white;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
     animation: fadeInUp 1s ease 0.4s both;
 }
 
@@ -319,6 +377,39 @@ nav {
     background: #e74c3c;
 }
 
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.filter-btn:hover {
+    border-color: #e74c3c;
+    color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #e74c3c;
+    border-color: #e74c3c;
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
 /* Updated projects grid with improved layout */
 .projects-grid {
     display: grid;
@@ -331,6 +422,9 @@ nav {
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -513,6 +607,24 @@ footer {
     .hero h1 {
         font-size: 2.5rem;
     }
+    
+    .hero-title {
+        font-size: 1.4rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .cta-button {
+        width: 100%;
+        max-width: 250px;
+    }
 
     .about-content {
         grid-template-columns: 1fr;
@@ -694,6 +806,24 @@ body.dark-mode .skill-category,
 body.dark-mode .about-content {
     background-color: #2a2a2a;
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .filter-btn {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #ddd;
+}
+
+body.dark-mode .filter-btn:hover {
+    border-color: #ff9800;
+    color: #ff9800;
+}
+
+body.dark-mode .filter-btn.active {
+    background: #ff9800;
+    border-color: #ff9800;
+    color: #121212;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
 }
 
 /* Buttons */
