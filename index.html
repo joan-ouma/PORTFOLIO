@@ -2,340 +2,689 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>My Portfolio Website</title>
+    <title>Joan Ouma | Software Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Joan Ouma - Software Engineer specializing in MERN stack, Golang, and modern web development.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="static/styles/style.css"/>
 </head>
 <body>
-<!-- Header -->
-<header>
-    <nav class="container">
-        <div class="logo">Ouma Joan Akello</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <!-- Dark Mode Toggle -->
-        <div class="dark-toggle">
-            <input type="checkbox" id="darkModeToggle"/>
-            <label class="toggle-label" for="darkModeToggle"></label>
-        </div>
-    </nav>
-</header>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner"></div>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <p class="hero-greeting fade-in">Hello, I'm</p>
-            <h1 class="fade-in">Ouma Joan Akello</h1>
-            <p class="hero-title fade-in">Software Engineer</p>
-            <p class="hero-description fade-in">I build scalable web applications and digital solutions that combine elegant design with robust functionality. Specialized in MERN stack, Golang, and modern web technologies.</p>
-            <div class="hero-buttons fade-in">
-                <a href="#projects" class="cta-button">View My Work</a>
-                <a href="#contact" class="cta-button cta-button-outline">Get In Touch</a>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
-<!-- About Section -->
-<section class="about" id="about">
-    <div class="container">
-        <div class="about-content fade-in">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>Hi there! I'm Joan, a developer with a love for crafting beautiful and functional web experiences. I
-                    enjoy problem-solving and I have a keen eye for detail.</p>
-                <p>When I'm not coding, you can find me exploring new technologies, contributing to open source
-                    projects, or learning about the latest design trends.</p>
-                <a href="mailto:joanouma48@gmail.com?subject=Contact%20Request" class="cta-button">Hire Me</a>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Joan<span>Ouma</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Dark Mode Toggle -->
+            <div class="theme-toggle">
+                <input type="checkbox" id="themeToggle" class="theme-checkbox">
+                <label for="themeToggle" class="theme-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="theme-ball"></span>
+                </label>
             </div>
-            <div class="about-image">
-                <img src="static/images/profile.jpg" alt="About me" id="profile-image"/>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Educational Background Section -->
-<section class="education" id="education">
-    <div class="container">
-        <h2 class="fade-in">Educational Background</h2>
-        <div class="education-grid">
-            <div class="education-card fade-in">
-                <h3>Bachelor of Science in Electronics and Computer Engineering</h3>
-                <p><strong>Jomo Kenyatta University of Agriculture and Technology</strong></p>
-                <p>2021 - Present</p>
-                <p>Studying various computer science and electronics topics including software development, digital systems, and embedded systems.</p>
-            </div>
-            <div class="education-card fade-in">
-                <h3>Technical School</h3>
-                <p><strong>Zoo and Sons Computer Academy</strong></p>
-                <p>June 2021- August 2021</p>
-                <p>Studied computer packages including Microsoft Office(Word,Excel,Power Point), Google workspace and Computer Hardware.</p>
-            </div>
-            <div class="education-card fade-in">
-                <h3>High School </h3>
-                <p><strong>Bunyore Girls' High School</strong></p>
-                <p>2017 - 2021</p>
-                <p>Attained an A- of 76 points.</p>
-            </div>
-        </div>
-    </div>
-</section>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
 
-
-<!-- Skills Section -->
-<section class="skills" id="skills">
-    <div class="container">
-        <h2 class="fade-in">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-palette"></i> UX/UI Design</h3>
-                <ul>
-                    <li>UX Research</li>
-                    <li>Design Thinking</li>
-                    <li>UI Design</li>
-                    <li>Figma, Adobe Photoshop, Canva</li>
-                </ul>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-code"></i> Frontend</h3>
-                <ul>
-                    <li>HTML, CSS, Bootstrap</li>
-                    <li>JavaScript, React</li>
-                    <li>Responsive Design</li>
-                    <li>Modern CSS (Grid, Flexbox)</li>
-                </ul>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-server"></i> Backend</h3>
-                <ul>
-                    <li>Python (Django, Flask)</li>
-                    <li>Node.js, Express</li>
-                    <li>Golang</li>
-                    <li>SQL (MySQL, PostgreSQL)</li>
-                    <li>MongoDB</li>
-                    <li>API Development</li>
-                    <li>Database Design</li>
-                    <li>Authentication</li>
-                </ul>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-lightbulb"></i> Soft Skills</h3>
-                <ul>
-                    <li>Problem Solving</li>
-                    <li>Collaboration</li>
-                    <li>Communication</li>
-                    <li>Critical Thinking</li>
-                </ul>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-wrench"></i> Tools</h3>
-                <ul>
-                    <li>Arduino</li>
-                    <li>Proteus</li>
-                    <li>KiCAD</li>
-                    <li>AUTOCAD</li>
-                    <li>Cisco Packet Tracer</li>
-                    <li>Postman</li>
-                    <li>Nginx</li>
-                    <li>Docker</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Certifications Section -->
-<section class="certifications" id="certifications">
-    <div class="container">
-        <h2 class="fade-in">Certifications</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-image">
-                    <img src="static/images/cert1.jpg" alt="Certification 1"/>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Joan Ouma</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Software Engineer & Full-Stack Developer</h2>
+                    <p class="hero-description">
+                        I craft elegant digital solutions that solve real-world problems. Specializing in scalable web applications using MERN stack, Golang, and modern technologies.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <i class="fas fa-code stat-icon"></i>
+                            <div>
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-laptop-code stat-icon"></i>
+                            <div>
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Technologies</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-graduation-cap stat-icon"></i>
+                            <div>
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-content">
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="static/images/profile.jpg" alt="Joan Ouma" class="profile-image">
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">About Me</span>
+                <h2 class="section-title">Crafting Digital Experiences</h2>
+                <p class="section-description">Get to know more about my journey and passion</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="static/images/profile.jpg" alt="About Joan Ouma">
+                        <div class="about-badge">
+                            <i class="fas fa-code"></i>
+                            <span>3+ Years Coding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Innovative Developer with a Passion for Excellence</h3>
+                    <p>Hi! I'm Joan, a passionate software engineer dedicated to creating impactful digital solutions. With expertise in both frontend and backend technologies, I bridge the gap between design and functionality.</p>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>BSc. Electronics & Computer Engineering</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Status</h4>
+                                <p>Open to Opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or learning about the latest design trends.</p>
+                    
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Let's Connect</span>
+                        </a>
+                        <a href="static/docs/resume.pdf" download class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Skills</span>
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-description">Technologies and tools I work with</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Frontend Skills -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-layer-group skill-icon"></i>
+                        <div>
+                            <h3>Frontend Development</h3>
+                            <p class="skill-category-desc">Creating responsive and interactive user interfaces</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML/CSS</span>
+                            </div>
+                            <p class="skill-desc">Semantic markup, modern CSS, responsive design</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <p class="skill-desc">ES6+, DOM manipulation, modern frameworks</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <p class="skill-desc">Component-based architecture, hooks, state management</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fab fa-bootstrap"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                            <p class="skill-desc">Responsive frameworks, utility classes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server skill-icon"></i>
+                        <div>
+                            <h3>Backend Development</h3>
+                            <p class="skill-category-desc">Building scalable server-side applications</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js/Express</span>
+                            </div>
+                            <p class="skill-desc">REST APIs, middleware, authentication</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <p class="skill-desc">Django, Flask, data processing</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fas fa-code"></i>
+                                <span>Golang</span>
+                            </div>
+                            <p class="skill-desc">Concurrent programming, microservices</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <i class="fas fa-database"></i>
+                                <span>Database Design</span>
+                            </div>
+                            <p class="skill-desc">SQL/NoSQL, optimization, modeling</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-tools skill-icon"></i>
+                        <div>
+                            <h3>Tools & Technologies</h3>
+                            <p class="skill-category-desc">Development tools and platforms</p>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">
+                            <i class="fab fa-git-alt"></i>
+                            Git
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-docker"></i>
+                            Docker
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-aws"></i>
+                            AWS
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-database"></i>
+                            MongoDB
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-database"></i>
+                            PostgreSQL
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-figma"></i>
+                            Figma
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-microchip"></i>
+                            Arduino
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-plug"></i>
+                            Postman
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-server"></i>
+                            Nginx
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-sync-alt"></i>
+                            CI/CD
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">A showcase of my recent work</p>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="mern">MERN Stack</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="golang">Golang</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="python ai">
+                    <div class="project-image">
+                        <img src="static/images/rec.jpg" alt="NutriChef Recipe-recommender App">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="https://joans-recipe-recommender-app.onrender.com/" target="_blank" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/joanjullie59/my_recipe_recommender_app" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">AI/ML</span>
+                            <span class="project-tag">Flask</span>
+                        </div>
+                        <h3 class="project-title">NutriChef AI Recipe Generator</h3>
+                        <p class="project-description">
+                            AI-powered recipe generator using GPT-4 to create personalized recipes based on ingredients and dietary preferences.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flask</span>
+                            <span>OpenAI API</span>
+                            <span>SQLite</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/joanjullie59/my_recipe_recommender_app" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://joans-recipe-recommender-app.onrender.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="mern">
+                    <div class="project-image">
+                        <img src="static/images/bugtracker.png" alt="Bug Tracker Application">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="https://bugtracker-ashy.vercel.app" target="_blank" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/joan-ouma/my_port_folio_website" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">MERN</span>
+                            <span class="project-tag">Full-Stack</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <h3 class="project-title">Bug Tracker System</h3>
+                        <p class="project-description">
+                            Full-stack bug tracking application for development teams with real-time updates and project management features.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/joan-ouma/my_port_folio_website" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://bugtracker-ashy.vercel.app" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - E-commerce -->
+                <div class="project-card" data-category="mern">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&fit=crop" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" target="_blank" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">MERN</span>
+                            <span class="project-tag">E-commerce</span>
+                            <span class="project-tag">Payment</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            Full-featured e-commerce solution with product management, secure payments, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Stripe</span>
+                            <span>Redux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Education & Certifications</h2>
+                <p class="section-description">Academic background and professional certifications</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Education Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - Present</div>
+                        <h3 class="timeline-title">Bachelor of Science in Electronics and Computer Engineering</h3>
+                        <p class="timeline-subtitle">Jomo Kenyatta University of Agriculture and Technology</p>
+                        <p class="timeline-description">
+                            Specializing in software development, digital systems, and embedded systems. Relevant coursework includes Data Structures, Algorithms, and Web Development.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">June 2021 - August 2021</div>
+                        <h3 class="timeline-title">Technical Training</h3>
+                        <p class="timeline-subtitle">Zoo and Sons Computer Academy</p>
+                        <p class="timeline-description">
+                            Completed comprehensive computer packages training including Microsoft Office Suite, Google Workspace, and Computer Hardware fundamentals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017 - 2021</div>
+                        <h3 class="timeline-title">High School Education</h3>
+                        <p class="timeline-subtitle">Bunyore Girls' High School</p>
+                        <p class="timeline-description">
+                            Graduated with an A- of 76 points, laying the foundation for technical and analytical skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Grid -->
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>MERN Stack Development</h3>
+                    <p>Professional certification in full-stack web development using MongoDB, Express.js, React, and Node.js from PLP Academy (Power Learn Project)</p>
+                    <a href="#" target="_blank" class="certification-link">
+                        View Certificate <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
                     <h3>Certified Web Developer</h3>
-                    <p>Completed the full web development course, covering frontend and backend technologies.</p>
-                    <div class="project-links">
-                        <a href="https://certificate.link/cert1" target="_blank">View Certificate</a>
-                    </div>
+                    <p>Full web development certification covering frontend and backend technologies</p>
+                    <a href="https://certificate.link/cert1" target="_blank" class="certification-link">
+                        View Certificate <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-            </div>
 
-            <div class="project-card fade-in">
-                <div class="project-image">
-                    <img src="static/images/cert2.jpg" alt="Certification 2"/>
-                </div>
-                <div class="project-content">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
                     <h3>AI & Machine Learning Certification</h3>
-                    <p>Advanced training on AI models and data science techniques.</p>
-                    <div class="project-links">
-                        <a href="https://certificate.link/cert2" target="_blank">View Certificate</a>
-                    </div>
+                    <p>Advanced training on AI models and data science techniques</p>
+                    <a href="https://certificate.link/cert2" target="_blank" class="certification-link">
+                        View Certificate <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Projects Section -->
-<section class="projects" id="projects">
-    <div class="container">
-        <h2 class="fade-in">My Projects</h2>
-        
-        <!-- Project Filter Buttons -->
-        <div class="project-filters fade-in">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="mern">MERN Stack</button>
-            <button class="filter-btn" data-filter="python">Python</button>
-            <button class="filter-btn" data-filter="ai">AI/ML</button>
-            <button class="filter-btn" data-filter="golang">Golang</button>
-        </div>
-        
-        <div class="projects-grid">
-            <div class="project-card fade-in" data-category="python ai">
-                <div class="project-image">
-                    <img src="static/images/rec.jpg" alt="NutriChef Recipe-recommender App" loading="lazy"/>
-                </div>
-                <div class="project-content">
-                    <h3>NutriChef Recipe-recommender App</h3>
-                    <p>NutriChef is an AI-Powered Recipe Generator<br/>
-                        A Flask-based web application that leverages OpenAI GPT-4 to generate personalized recipes based
-                        on user-provided ingredients, dietary preferences, and cuisine types. Features include user
-                        login/signup, dynamic recipe generation, and user search history management.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/joanjullie59/my_recipe_recommender_app" target="_blank">View Details</a>
-                        <a href="https://joans-recipe-recommender-app.onrender.com/" target="_blank">View Design</a>
-                    </div>
-                </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-description">Have a project in mind? Let's discuss!</p>
             </div>
 
-            <div class="project-card fade-in" data-category="mern">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="E-Commerce Platform" loading="lazy"/>
-                </div>
-                <div class="project-content">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A comprehensive full-stack e-commerce solution built with MERN stack. Features include product catalog management, secure payment processing, order tracking, user authentication, shopping cart functionality, and admin dashboard. Solves real-world online retail challenges by providing a scalable, secure, and user-friendly shopping experience.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Details</a>
-                        <a href="#" target="_blank">View Design</a>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:joanouma48@gmail.com">joanouma48@gmail.com</a>
+                        </div>
                     </div>
-                </div>
-            </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/joan-ouma" target="_blank">linkedin.com/in/joan-ouma</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/joan-ouma" target="_blank">github.com/joan-ouma</a>
+                        </div>
+                    </div>
 
-            <div class="project-card fade-in" data-category="python golang">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop" alt="Healthcare Appointment System" loading="lazy"/>
-                </div>
-                <div class="project-content">
-                    <h3>Healthcare Appointment Booking System</h3>
-                    <p>A digital healthcare solution that streamlines appointment scheduling for clinics and hospitals. Built with Python/Flask backend and modern frontend technologies. Features include doctor availability management, patient registration, automated reminders, appointment rescheduling, and medical history tracking. Addresses critical healthcare access challenges by reducing wait times and improving patient experience.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Details</a>
-                        <a href="#" target="_blank">View Design</a>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Twitter</h3>
+                            <a href="https://twitter.com/Jullie_IOT" target="_blank">@Jullie_IOT</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card fade-in" data-category="ai">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop"
-                         alt="Mental Health Platform" loading="lazy"/>
-                </div>
-                <div class="project-content">
-                    <h3>Mental Health Platform</h3>
-                    <p>An AI-powered mental health platform for students providing personalized support and resources
-                        for mental wellness.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Details</a>
-                        <a href="#" target="_blank">View Design</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in" data-category="python">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=200&fit=crop"
-                         alt="Feedback Platform" loading="lazy"/>
-                </div>
-                <div class="project-content">
-                    <h3>Anonymous Feedback Platform</h3>
-                    <p>A secure anonymous feedback platform for students to provide honest feedback about their
-                        educational experience.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Details</a>
-                        <a href="#" target="_blank">View Design</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in" data-category="mern">
-                <div class="project-image">
-                    <img src="static/images/bugtracker.png"
-                         alt="Bug Tracker Application" loading="lazy"/>
-                </div>
-                <div class="project-content">
-                    <h3>Bug Tracker</h3>
-                    <p>A full-stack MERN bug tracker that helps development teams log, assign, and resolve issues efficiently. Features user authentication, project organization, and real-time status tracking. Built to demonstrate robust full-stack development and debugging proficiency.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/joan-ouma/my_port_folio_website" target="_blank">View Details</a>
-                        <a href="https://bugtracker-ashy.vercel.app" target="_blank">View Design</a>
-                    </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section class="contact" id="contact">
-    <div class="container">
-        <h2 class="fade-in">Let's Work Together</h2>
-        <p class="fade-in">Have a project in mind? Let's discuss how we can bring your ideas to life.</p>
-        <div class="contact-links fade-in">
-            <a href="mailto:joanouma48@gmail.com" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://linkedin.com/in/joan-ouma" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/joan-ouma" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://twitter.com/Jullie_IOT" target="_blank" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://behance.net/joanouma" target="_blank" title="Behance">
-                <i class="fab fa-behance"></i>
-            </a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">Joan<span>Ouma</span></a>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="#">Web Development</a>
+                        <a href="#">UI/UX Design</a>
+                        <a href="#">API Development</a>
+                        <a href="#">Consulting</a>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/joan-ouma" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/joan-ouma" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/Jullie_IOT" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:joanouma48@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Joan Ouma. All rights reserved.</p>
+                    <p>Designed & Developed with <i class="fas fa-heart"></i> by Joan</p>
+                </div>
+            </div>
         </div>
-        <a href="mailto:joanouma48@gmail.com?subject=Contact%20Request" class="cta-button">Get In Touch</a>
-    </div>
-</section>
+    </footer>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Joan Ouma. All rights reserved.</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
