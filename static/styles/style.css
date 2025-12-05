@@ -527,17 +527,17 @@ body {
 .about-badge-left {
     position: absolute;
     top: 20px;
-    left: -20px;
+    left: -80px;
     width: 60px;
     height: 60px;
-    background: var(--primary-color);
+    background: #ff9800;
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 5px 20px rgba(255, 152, 0, 0.4);
     z-index: 2;
     animation: pulse 2s ease-in-out infinite;
 }
